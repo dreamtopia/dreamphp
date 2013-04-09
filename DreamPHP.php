@@ -47,9 +47,9 @@
  set_include_path($system_include);
  
  //加载框架方法库
- include 'DREAM_LIBRARIES_PATH'.'function.inc.php';
+ include DREAM_LIBRARIES_PATH.'function.inc.php';
 
- 
- 
- 
- 
+ //项目不存在则创建项目
+ if(!file_exists(Controller_PATH)){
+ 	dream_create_project();
+ }
